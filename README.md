@@ -1,2 +1,2 @@
-# Zenith-
+# Zenith
 Resolução de exerícios
