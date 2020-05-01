@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-int comando(char *entrada, char *comando){
+int comando(char *entrada, char *comando){  // checa o inicio da entrada para determinar qual é o comando
   int i = 0;
   while(comando[i] == entrada[i]){
     i++;
@@ -16,8 +16,8 @@ int comando(char *entrada, char *comando){
 }
 
 int** criar(int *alturamax, int *larguramax, char *entrada){
-  char aux[4]; //chega ate o digito 1000
-  int i = 7, j = 0;
+  char aux[4]; //chega ate o digito 9999
+  int i = 7, j = 0; // as informações necessárias da entrada começam a partir do indice igual a 7 da string
 
   while(entrada[i] != ' '){
     aux[j++] = entrada[i++];
@@ -48,7 +48,7 @@ int** criar(int *alturamax, int *larguramax, char *entrada){
 
 void linha(int **matriz, int alturamax, int larguramax, char *entrada){
   char aux[4]; //chega ate o digito 9999
-  int i = 5, j = 0;
+  int i = 5, j = 0; // as informações necessárias da entrada começam a partir do indice igual a 5 da string
 
   while(entrada[i] != ' '){
     aux[j++] = entrada[i++];
@@ -116,8 +116,8 @@ void linha(int **matriz, int alturamax, int larguramax, char *entrada){
 }
 
 void circulo(int **matriz, int alturamax, int larguramax, char *entrada){
-  char aux[4];
-  int i = 7, j = 0;
+  char aux[4]; 
+  int i = 7, j = 0; // as informações necessárias da entrada começam a partir do indice igual a 7 da string 
 
   while(entrada[i] != ' '){
     aux[j++] = entrada[i++];
@@ -160,7 +160,7 @@ void circulo(int **matriz, int alturamax, int larguramax, char *entrada){
       distancia--;
       float modulo = sqrt(pow(distancia-raio,2));
       
-      if(modulo <= 0.5){
+      if(modulo <= 0.5){     
         matriz[i][j] = cor;
       }
 
@@ -171,7 +171,7 @@ void circulo(int **matriz, int alturamax, int larguramax, char *entrada){
 
 void disco(int **matriz, int alturamax, int larguramax, char *entrada){
   char aux[4];
-  int i = 5, j = 0;
+  int i = 5, j = 0; // as informações necessárias da entrada começam a partir do indice igual a 5 da string
 
   while(entrada[i] != ' '){
     aux[j++] = entrada[i++];
@@ -225,7 +225,7 @@ void disco(int **matriz, int alturamax, int larguramax, char *entrada){
 
 void retangulo(int **matriz, int alturamax, int larguramax, char *entrada){
   char aux[4]; //chega ate o digito 9999
-  int i = 5, j = 0;
+  int i = 5, j = 0; // as informações necessárias da entrada começam a partir do indice igual a 5 da string
 
   while(entrada[i] != ' '){
     aux[j++] = entrada[i++];
@@ -313,7 +313,7 @@ void retangulo(int **matriz, int alturamax, int larguramax, char *entrada){
 
 void export(int **matriz, int alturamax, int larguramax, char *entrada){
   char aux[20]; // deve ser o suficiente para pegar o entrada e a extensao do arquivo
-  int i = 7, j = 0;
+  int i = 7, j = 0; // as informações necessárias da entrada começam a partir do indice igual a 7 da string
   FILE *saida;
 
   while(entrada[i] != '\n'){
