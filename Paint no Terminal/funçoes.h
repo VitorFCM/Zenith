@@ -8,7 +8,7 @@
 
 	int** criar(int *alturamax, int *larguramax, int *valores);
 
-	void linha(int **matriz, int alturamax, int larguramax, int *valores)
+	void linha(int **matriz, int alturamax, int larguramax, int *valores);
 
 	void circulo(int **matriz, int alturamax, int larguramax, int *valores);
 
