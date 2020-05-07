@@ -1,6 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include "funçoes.h"
+#include "funcoes.h"
 
 int main(void) {
   int **matriz;
