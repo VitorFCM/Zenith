@@ -1,5 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "funçoes.h"
-
 
 int main(void) {
   int **matriz;
@@ -11,26 +12,35 @@ int main(void) {
     fgets(entrada,100,stdin);
 
     if(comando(entrada,"CREATE")){
-     matriz = criar(&alturamax, &larguramax, entrada);
+      int *valores_create = valores(2, entrada);
+      matriz = criar(&alturamax, &larguramax, valores_create);
     }
+
     else if(comando(entrada,"LINE")){
-      linha(matriz, alturamax, larguramax, entrada);
+      int *valores_line = valores(5, entrada);
+      linha(matriz, alturamax, larguramax, valores_line);
     }
+
     else if(comando(entrada,"CIRCLE")){
-      circulo(matriz, alturamax, larguramax, entrada);
+      int *valores_circle = valores(4, entrada);
+      circulo(matriz, alturamax, larguramax, valores_circle);
     }
+
     else if(comando(entrada,"DISK")){
-      disco(matriz, alturamax, larguramax, entrada);
+      int *valores_disk = valores(4, entrada);
+      disco(matriz, alturamax, larguramax, valores_disk);
     }
+
     else if(comando(entrada,"RECT")){
-      retangulo(matriz ,alturamax ,larguramax ,entrada);
+      int *valores_rect = valores(5, entrada);
+      retangulo(matriz, alturamax, larguramax, valores_rect);
     }
+
     else if(comando(entrada,"EXPORT")){
-      export(matriz ,alturamax, larguramax, entrada);
+      export(matriz, alturamax, larguramax, entrada);
     } 
   }
  
 
   return 0;
 }
-
