@@ -1,2 +1,2 @@
 # Zenith
-Resolução de exerícios
+Projetos realizados no grupo Zenith
